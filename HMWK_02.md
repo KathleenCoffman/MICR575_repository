@@ -1,0 +1,58 @@
+# HMWK2
+
+\#**Homework assignment two**  
+1. **What were the main issues in the Reinhard and Rogoff issue, and how
+best could they have been avoided?** *The main issues here in this
+situation involved a few different things. One issue was their obvious
+excel error. Another problem is that their data was not publicly
+accessible when their findings were published.*  
+*These issues could have been avoided by having others check their codes
+and findings and excel sheets several times. They also should have
+included their raw data and excel file when their inital publication
+became available.*  
+2. **What key attributes make a piece of data analysis reproducible?
+Please put those attributes in a prioritized list (i.e., for you, what
+is most important, next most important, etc.**  
++*Annotated codes are incredibly important to ensure reproducability!*  
++*Making raw data and excel files publicly accessible upon publication
+review*  
++*Keep detailed notes that directly correspond to your data*  
++*Making sure excel file columns and headers have sensible titles*  
+3. **Imagine that you are doing a piece of data analysis that only you
+will ever see perhaps you are shopping for a car and trying to determine
+what will give you the best value for your money. Should you think about
+making your data analysis reproducible? Why or why not?**  
+*No matter what data analysis I do, I think it is important to make data
+available to other and to make it reproducable.  
+Why? Because reproducible data is helpful to those out there wondering
+the same thing. If I am look for the best value for my money regarding
+car shopping, it is practically guarunteed that many others are
+assessing the same thing. To contribute to hte greater good of finding
+the best value for money, I would definitely think about making my data
+reproducible.*
+
+------------------------------------------------------------------------
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a
+finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that
+includes both content and the output of embedded code. You can embed
+code like this:
+
+``` r
+1 + 1
+```
+
+    [1] 2
+
+You can add options to executable code like this
+
+    [1] 4
+
+The `echo: false` option disables the printing of code (only output is
+displayed).
