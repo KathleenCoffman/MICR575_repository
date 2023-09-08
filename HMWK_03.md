@@ -160,7 +160,7 @@ library("tidyverse")
 ------------------------------------------------------------------------
 
 ``` r
-library(ggthemes)
+library(ggthemes, ggplot)
   install.packages("palmerpenguins", repos = "http://cran.us.r-project.org") 
 ```
 
@@ -170,10 +170,11 @@ library(ggthemes)
     package 'palmerpenguins' successfully unpacked and MD5 sums checked
 
     The downloaded binary packages are in
-        C:\Users\owner\AppData\Local\Temp\Rtmpw55iNU\downloaded_packages
+        C:\Users\owner\AppData\Local\Temp\RtmpiYHyXX\downloaded_packages
 
 ``` r
-library("palmerpenguins")  
+library("palmerpenguins") 
+  penguins <- penguins # this creates an object for my dataset so that I can see it in my global environment
 penguins  
 ```
 
@@ -194,113 +195,31 @@ penguins
     # ℹ 2 more variables: sex <fct>, year <int>
 
 ``` r
-view(penguins)  
-ggplot(data = penguins)  
+view(penguins) 
+ggplot(data = penguins,
+  mapping = aes(x = flipper_length_mm, y = body_mass_g)) + 
+  geom_point(aes(color = bill_depth_mm)) + 
+  geom_smooth(method = "lm") + labs(color = "bill_depth_mm")
 ```
+
+    `geom_smooth()` using formula = 'y ~ x'
+
+    Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
+
+    Warning: Removed 2 rows containing missing values (`geom_point()`).
 
 ![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-1.png)
 
 ``` r
-ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
-)  
+  ggsave(filename = "hmk_03_plot.png", device = "png")
 ```
 
-![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-2.png)
-
-``` r
-ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
-) +
-  geom_point()  
-```
-
-    Warning: Removed 2 rows containing missing values (`geom_point()`).
-
-![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-3.png)
-
-``` r
-  ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
-) +
-  geom_point()  
-```
-
-    Warning: Removed 2 rows containing missing values (`geom_point()`).
-
-![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-4.png)
-
-``` r
-  ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
-) +
-  geom_point() +
-  geom_smooth(method = "lm")  
-```
+    Saving 7 x 5 in image
 
     `geom_smooth()` using formula = 'y ~ x'
 
     Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
     Removed 2 rows containing missing values (`geom_point()`).
-
-![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-5.png)
-
-``` r
-  ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
-) +
-  geom_point(mapping = aes(color = species)) +
-  geom_smooth(method = "lm")  
-```
-
-    `geom_smooth()` using formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
-    Removed 2 rows containing missing values (`geom_point()`).
-
-![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-6.png)
-
-``` r
-  ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
-) +
-  geom_point(mapping = aes(color = species, shape = species)) +
-  geom_smooth(method = "lm")  
-```
-
-    `geom_smooth()` using formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
-    Removed 2 rows containing missing values (`geom_point()`).
-
-![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-7.png)
-
-``` r
-  ggplot(
-  data = penguins,
-  mapping = aes(x = flipper_length_mm, y = body_mass_g)
-) +
-  geom_point(aes(color = species, shape = species)) +
-  geom_smooth(method = "lm") +
-  labs(
-    title = "Body mass and flipper length",
-    subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
-    x = "Flipper length (mm)", y = "Body mass (g)",
-    color = "Species", shape = "Species") + scale_color_colorblind() 
-```
-
-    `geom_smooth()` using formula = 'y ~ x'
-
-    Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
-    Removed 2 rows containing missing values (`geom_point()`).
-
-![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-8.png)
 
 ------------------------------------------------------------------------
 
