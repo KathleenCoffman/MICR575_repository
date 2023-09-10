@@ -19,8 +19,8 @@ __Creating and naming variables__
 ---
 
 ```{r}
-x<-(3*(4+2))  
-x*3.14159
+x<-18
+x* pi
 ```
 
 ---
