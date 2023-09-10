@@ -206,7 +206,7 @@ ggplot(data = penguins,
 
 
 ![](HMWK_03_files/figure-commonmark/unnamed-chunk-12-1.png)
-
+http://localhost:7834/ 
 ``` r
   ggsave(filename = "hmk_03_plot.png", device = "png")
 ```
