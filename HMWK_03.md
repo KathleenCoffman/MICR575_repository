@@ -3,7 +3,7 @@
 **Creating and naming variables**  
 1. Create a variable called x and use it to store the result of the
 calculation (3\*(4+2).  
-2. Then multiply the product by pi value (3.14159).
+2. Then multiply the product by pi value.
 
 ------------------------------------------------------------------------
 
@@ -18,25 +18,32 @@ calculation (3\*(4+2).
 ------------------------------------------------------------------------
 
 ``` r
-x<-(3*(4+2))  
-x*3.14159
+x <- 18  
 ```
 
-    [1] 56.54862
-
 ------------------------------------------------------------------------
 
-3.  Use the getwd() function to show your current working directory. Is
-    that a good working directory, and what program do you think set it
-    that way?
+``` r
+x* pi
+```
 
-------------------------------------------------------------------------
+    [1] 56.54867
+
+3\. Use the getwd() function to show your current working directory. Is
+that a good working directory, and what program do you think set it that
+way?
 
 ``` r
 getwd() 
 ```
 
     [1] "C:/Users/owner/OneDrive - University of Tennessee/Documents/MICR575 repro data/Project.folder"
+
+*This is a good working directory because it is in a specific file
+location that is easily recognizable to me, and the file location name
+corresponds to the class I am completing this homework assignment for.*
+
+*The program that set the working directory this way would be RStudio.*
 
 ------------------------------------------------------------------------
 
@@ -95,6 +102,13 @@ object length occurs when the vector lengths added are not the same.
 This creates a lot of inconsistency here and room for error. It also
 means that each has a different number of elements.*
 
+*Vector recycling is okay if your vectors are the same length because
+it’s designed to perform the operation according the positions of values
+within each vector. But if your vectors aren’t the same length, it can
+lead to errors in your data because it will circle back to the first
+value in the shortest vector (which may not be originally intended by
+the user).*
+
 5.  Explain the following code and what it does c(1, 5, 9) +3
 
 ------------------------------------------------------------------------
@@ -111,7 +125,9 @@ c(1, 5, 9) + 3
 corresponding outcomes where each individual number, (1, 5, and 9) is
 added with 3 to produce appropriate corresponding outcomes (4, 8, 12).
 This is probably a better option in adding numbers compared to adding v1
-and v2 in the previous question.*
+and v2 in the previous question. Although, the behaviors in the previous
+question and this one have the same goal, using the c function provides
+a clearer, more concise answer.*
 
 6.  Remove (delete) every variable in your workspace
 
@@ -140,17 +156,6 @@ rm(list=ls())
 library("tidyverse")
 ```
 
-    ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-    ✔ dplyr     1.1.3     ✔ readr     2.1.4
-    ✔ forcats   1.0.0     ✔ stringr   1.5.0
-    ✔ ggplot2   3.4.3     ✔ tibble    3.2.1
-    ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-    ✔ purrr     1.0.2     
-    ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ✖ dplyr::filter() masks stats::filter()
-    ✖ dplyr::lag()    masks stats::lag()
-    ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
-
 ------------------------------------------------------------------------
 
 2.  Recreate the visualization of body_mass_g to flipper_length_mm, from
@@ -164,13 +169,10 @@ library(ggthemes, ggplot)
   install.packages("palmerpenguins", repos = "http://cran.us.r-project.org") 
 ```
 
-    Installing package into 'C:/Users/owner/AppData/Local/R/win-library/4.3'
-    (as 'lib' is unspecified)
-
     package 'palmerpenguins' successfully unpacked and MD5 sums checked
 
     The downloaded binary packages are in
-        C:\Users\owner\AppData\Local\Temp\RtmpiYHyXX\downloaded_packages
+        C:\Users\owner\AppData\Local\Temp\RtmpUlmR7u\downloaded_packages
 
 ``` r
 library("palmerpenguins") 
@@ -202,26 +204,24 @@ ggplot(data = penguins,
   geom_smooth(method = "lm") + labs(color = "bill_depth_mm")
 ```
 
-    `geom_smooth()` using formula = 'y ~ x'
-
     Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
 
     Warning: Removed 2 rows containing missing values (`geom_point()`).
 
-![](HMWK_03_files/figure-commonmark/unnamed-chunk-11-1.png)
+![](HMWK_03_files/figure-commonmark/unnamed-chunk-12-1.png)
 
 ``` r
   ggsave(filename = "hmk_03_plot.png", device = "png")
 ```
 
-    Saving 7 x 5 in image
-
-    `geom_smooth()` using formula = 'y ~ x'
-
     Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
     Removed 2 rows containing missing values (`geom_point()`).
 
 ------------------------------------------------------------------------
+
+[C:\Users\owner\OneDrive - University of Tennessee\Documents\MICR575
+repro
+data\Project.folder\hmk_03_plot.png](C:\Users\owner\OneDrive%20-%20University%20of%20Tennessee\Documents\MICR575%20repro%20data\Project.folder\hmk_03_plot.png)
 
 3.  Explain why each aesthetic is mapped at the level that it is (i.e.,
     at the global level, in the ggplot() function call, or at the geom
@@ -234,29 +234,3 @@ you’re comparing, i.e. the “plot objects”. Then, we can add layers to
 add in the actual datapoints, and use the aes argument within geom_point
 to further different the data visually. (i.e., using color and shape to
 specify species type)*
-
-------------------------------------------------------------------------
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a
-finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that
-includes both content and the output of embedded code. You can embed
-code like this:
-
-``` r
-1 + 1
-```
-
-    [1] 2
-
-You can add options to executable code like this
-
-    [1] 4
-
-The `echo: false` option disables the printing of code (only output is
-displayed).

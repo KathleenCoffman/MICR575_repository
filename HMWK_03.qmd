@@ -4,75 +4,77 @@ format: gfm
 editor: visual
 ---
 
-__Creating and naming variables__  
-1. Create a variable called x and use it to store the result of the calculation (3*(4+2).  
-2. Then multiply the product by pi value (3.14159).
+**Creating and naming variables**\
+1. Create a variable called x and use it to store the result of the calculation (3\*(4+2).\
+2. Then multiply the product by pi value.
 
----
+------------------------------------------------------------------------
 
 ```{r}
 (3*(4+2))  
 ```
 
----
+------------------------------------------------------------------------
 
----
+------------------------------------------------------------------------
 
 ```{r}
-x<-(3*(4+2))  
-x*3.14159
+x <- 18  
+
 ```
 
----
+------------------------------------------------------------------------
 
-3. Use the getwd() function to show your current working directory. Is that a good working directory, and what program do you think set it that way?  
----
+```{r}
+x* pi
+```
+
+3\. Use the getwd() function to show your current working directory. Is that a good working directory, and what program do you think set it that way?
 
 ```{r}
 getwd() 
 ```
 
----
+*This is a good working directory because it is in a specific file location that is easily recognizable to me, and the file location name corresponds to the class I am completing this homework assignment for.*
 
+*The program that set the working directory this way would be RStudio.*
 
+------------------------------------------------------------------------
 
-__Vectors__  
-1. Use the c() function to create a vector of numbers.  
+**Vectors**\
+1. Use the c() function to create a vector of numbers.
 
----
+------------------------------------------------------------------------
 
 ```{r}
 plant_height<-c(6.0, 8.0, 10.0)  
 ```
 
----
+------------------------------------------------------------------------
 
+2.  Use the c() function to create a vector of characters.
 
-2. Use the c() function to create a vector of characters.  
-
----
+------------------------------------------------------------------------
 
 ```{r}
 plant_name<-c("kale", "cilantro", "broccoli")  
 ```
 
----
+------------------------------------------------------------------------
 
+3.  Use the c() function to create a vector of characters.
 
-3. Use the c() function to create a vector of characters.  
-
----
+------------------------------------------------------------------------
 
 ```{r}
 plant_index<- 1:10  
 ```
 
----
+------------------------------------------------------------------------
 
+4.  Explain why the following code returns what it does. Also address whether you think this was a good decision on the part of the designers of R?
 
-4. Explain why the following code returns what it does. Also address whether you think this was a good decision on the part of the designers of R?  
-
----
+------------------------------------------------------------------------
 
 ```{r}
 v1 <- 1:3  
@@ -80,53 +82,52 @@ v2 <- c(1:4)
 v1 + v2  
 ```
 
----
+------------------------------------------------------------------------
 
+*The response saying longer object length is not a multiple of shorter object length occurs when the vector lengths added are not the same. This creates a lot of inconsistency here and room for error. It also means that each has a different number of elements.*
 
-_The response saying longer object length is not a multiple of shorter object length occurs when the vector lengths added are not the same. This creates a lot of inconsistency here and room for error. It also means that each has a different number of elements._  
+*Vector recycling is okay if your vectors are the same length because it's designed to perform the operation according the positions of values within each vector. But if your vectors aren't the same length, it can lead to errors in your data because it will circle back to the first value in the shortest vector (which may not be originally intended by the user).*
 
-5. Explain the following code and what it does c(1, 5, 9) +3 
+5.  Explain the following code and what it does c(1, 5, 9) +3
 
----
+------------------------------------------------------------------------
 
 ```{r}
 c(1, 5, 9) + 3  
 ```
 
----
+------------------------------------------------------------------------
 
+*This code takes each individual number in parentheses and produces 3 corresponding outcomes where each individual number, (1, 5, and 9) is added with 3 to produce appropriate corresponding outcomes (4, 8, 12). This is probably a better option in adding numbers compared to adding v1 and v2 in the previous question. Although, the behaviors in the previous question and this one have the same goal, using the c function provides a clearer, more concise answer.*
 
-_This code takes each individual number in parentheses and produces 3 corresponding outcomes where each individual number, (1, 5, and 9) is added with 3 to produce appropriate corresponding outcomes (4, 8, 12). This is probably a better option in adding numbers compared to adding v1 and v2 in the previous question._  
+6.  Remove (delete) every variable in your workspace
 
-6. Remove (delete) every variable in your workspace  
-
----
+------------------------------------------------------------------------
 
 ```{r}
 ls()  
 rm(list=ls())  
 ```
 
----
+------------------------------------------------------------------------
 
+**Graphics**
 
-__Graphics__  
+1.  Load the tidyverse package.
 
-1. Load the tidyverse package.  
+------------------------------------------------------------------------
 
----
-
-```{r}
+```{r, message=FALSE}
 library("tidyverse")
 ```
 
----
-  
-2. Recreate the visualization of body_mass_g to flipper_length_mm, from the penguins data set, that is shown in question 8 of section 2.2.5 of R4DS.  
+------------------------------------------------------------------------
 
----
+2.  Recreate the visualization of body_mass_g to flipper_length_mm, from the penguins data set, that is shown in question 8 of section 2.2.5 of R4DS.
 
-```{r}
+------------------------------------------------------------------------
+
+```{r, message=FALSE}
 library(ggthemes, ggplot)
   install.packages("palmerpenguins", repos = "http://cran.us.r-project.org") 
 library("palmerpenguins") 
@@ -140,31 +141,8 @@ ggplot(data = penguins,
   ggsave(filename = "hmk_03_plot.png", device = "png")
 ```
 
----
+------------------------------------------------------------------------
 
-    
-3. Explain why each aesthetic is mapped at the level that it is (i.e., at the global level, in the ggplot() function call, or at the geom level, in the geom_XXX() function call). Noting that a lot of different options will work, but some options are clearly better than others.
+3.  Explain why each aesthetic is mapped at the level that it is (i.e., at the global level, in the ggplot() function call, or at the geom level, in the geom_XXX() function call). Noting that a lot of different options will work, but some options are clearly better than others.
 
-_We map body mass and flipper length globally because it tells you what you're comparing, i.e. the "plot objects". Then, we can add layers to add in the actual datapoints, and use the aes argument within geom_point to further different the data visually. (i.e., using color and shape to specify species type)_
----
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-You can add options to executable code like this
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
+*We map body mass and flipper length globally because it tells you what you're comparing, i.e. the "plot objects". Then, we can add layers to add in the actual datapoints, and use the aes argument within geom_point to further different the data visually. (i.e., using color and shape to specify species type)*
