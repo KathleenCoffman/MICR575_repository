@@ -204,19 +204,12 @@ ggplot(data = penguins,
   geom_smooth(method = "lm") + labs(color = "bill_depth_mm")
 ```
 
-    Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
-
-    Warning: Removed 2 rows containing missing values (`geom_point()`).
 
 ![](HMWK_03_files/figure-commonmark/unnamed-chunk-12-1.png)
 
 ``` r
   ggsave(filename = "hmk_03_plot.png", device = "png")
 ```
-
-    Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
-    Removed 2 rows containing missing values (`geom_point()`).
-
 ------------------------------------------------------------------------
 
 3.  Explain why each aesthetic is mapped at the level that it is (i.e.,
@@ -230,3 +223,7 @@ you’re comparing, i.e. the “plot objects”. Then, we can add layers to
 add in the actual datapoints, and use the aes argument within geom_point
 to further different the data visually. (i.e., using color and shape to
 specify species type)*
+
+------------------------------------------------------------------------
+ 
+
