@@ -172,7 +172,7 @@ library(ggthemes, ggplot)
     package 'palmerpenguins' successfully unpacked and MD5 sums checked
 
     The downloaded binary packages are in
-        C:\Users\owner\AppData\Local\Temp\RtmpUlmR7u\downloaded_packages
+        C:\Users\owner\AppData\Local\Temp\RtmpcbKFKV\downloaded_packages
 
 ``` r
 library("palmerpenguins") 
@@ -218,10 +218,6 @@ ggplot(data = penguins,
     Removed 2 rows containing missing values (`geom_point()`).
 
 ------------------------------------------------------------------------
-
-[C:\Users\owner\OneDrive - University of Tennessee\Documents\MICR575
-repro
-data\Project.folder\hmk_03_plot.png](C:\Users\owner\OneDrive%20-%20University%20of%20Tennessee\Documents\MICR575%20repro%20data\Project.folder\hmk_03_plot.png)
 
 3.  Explain why each aesthetic is mapped at the level that it is (i.e.,
     at the global level, in the ggplot() function call, or at the geom
