@@ -203,11 +203,11 @@ ggplot(data = penguins,
 ```
 
 
-![](hmk_03_plot.png)
 ``` r
   ggsave(filename = "hmk_03_plot.png", device = "png")
 ```
 ------------------------------------------------------------------------
+![](hmk_03_plot.png)
 
 3.  Explain why each aesthetic is mapped at the level that it is (i.e.,
     at the global level, in the ggplot() function call, or at the geom
