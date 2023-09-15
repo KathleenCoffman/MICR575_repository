@@ -175,9 +175,7 @@ library(ggthemes, ggplot)
         C:\Users\owner\AppData\Local\Temp\RtmpcbKFKV\downloaded_packages
 
 ``` r
-library("palmerpenguins") 
-  penguins <- penguins # this creates an object for my dataset so that I can see it in my global environment
-penguins  
+library("palmerpenguins")  
 ```
 
     # A tibble: 344 × 8
@@ -206,7 +204,6 @@ ggplot(data = penguins,
 
 
 ![](HMWK_03_files/figure-commonmark/unnamed-chunk-12-1.png)
-# http://localhost:7834/ 
 ``` r
   ggsave(filename = "hmk_03_plot.png", device = "png")
 ```
