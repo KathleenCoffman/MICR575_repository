@@ -30,8 +30,9 @@ flights|>
 ```
 
 
+------------------------------------------------------------------------
+![](HMWK_04_files/figure-commonmark/unnamed-chunk-2-1.png)
 
-#![](HMWK_04_files/figure-commonmark/unnamed-chunk-2-1.png)
 # Question 2: dealing with NAs
 
 Make a data frame of all of the rows of `flights` that have values for
@@ -77,5 +78,5 @@ avg.speeds |>
        x = "Airline",
        y = "Average Flight Speed (mph)")
 ```
-
-# ![](HMWK_04_files/figure-commonmark/unnamed-chunk-4-1.png)
+------------------------------------------------------------------------
+![](HMWK_04_files/figure-commonmark/unnamed-chunk-4-1.png)
