@@ -74,7 +74,8 @@ avg.speeds |>
   geom_col(na.rm = TRUE) + 
   labs(title = "Average Speed by Airline",
        x = "Airline",
-       y = "Average Flight Speed (mph)")
+       y = "Average Flight Speed (mph)",
+        ggsave(filename = "hmk_04_plot.png", device = "png")) 
 ```
 
 ![](HMWK_04_files/figure-commonmark/unnamed-chunk-4-1.png)
