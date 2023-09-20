@@ -80,4 +80,4 @@ avg.speeds |>
         ggsave(filename = "hmk_04_plot.png", device = "png")) 
 ```
 ------------------------------------------------------------------------
-![](HMWK_04_files/figure-commonmark/unnamed-chunk-4-1.png)
+![](hmk_04_plot.png)
