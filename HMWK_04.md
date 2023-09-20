@@ -31,7 +31,7 @@ flights|>
 
 
 ------------------------------------------------------------------------
-![](HMWK_04_files/figure-commonmark/unnamed-chunk-2-1.png)
+![](hmk_04_dotplot.png)
 
 # Question 2: dealing with NAs
 
