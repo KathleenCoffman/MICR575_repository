@@ -128,10 +128,7 @@ library("tidyverse")
 
 ```{r, message=FALSE}
 library(ggthemes, ggplot)
-  install.packages("palmerpenguins", repos = "http://cran.us.r-project.org") 
 library("palmerpenguins") 
-  penguins <- penguins # this creates an object for my dataset so that I can see it in my global environment
-penguins  
 view(penguins) 
 ggplot(data = penguins,
   mapping = aes(x = flipper_length_mm, y = body_mass_g)) + 
