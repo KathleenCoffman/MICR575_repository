@@ -97,10 +97,11 @@ mushrooms |>
   scale_x_discrete(labels = NULL)
 ```
 
-![](mushrooms.png)
+
 
 ``` r
         ggsave(filename = "mushrooms.png", device = "png")
+![](mushrooms.png)
 ```
 
 Here above, you can a small dataset I created, detailing mushroom
