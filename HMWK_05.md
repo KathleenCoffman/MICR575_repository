@@ -101,9 +101,8 @@ mushrooms |>
 
 ``` r
         ggsave(filename = "mushrooms.png", device = "png")
-![](mushrooms.png)
 ```
-
+![](mushrooms.png) 
 Here above, you can a small dataset I created, detailing mushroom
 species name, color, and height. There were no N/A values in this data
 so I did not have to do anything concerning them. I did however use
