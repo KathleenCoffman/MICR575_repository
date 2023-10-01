@@ -74,6 +74,4 @@ ggplot(tidy_eagles_data, aes(x = Year, y = Nests, color = Region)) +
 ``` r
                        ggsave(filename = "eagles_plot.png", device = "png")
 ```
-
-    Saving 7 x 5 in image
-    `geom_smooth()` using formula = 'y ~ x'
+![](eagles_plot.png)
