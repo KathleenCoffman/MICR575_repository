@@ -97,7 +97,7 @@ mushrooms |>
   scale_x_discrete(labels = NULL)
 ```
 
-![](HMWK_05_files/figure-commonmark/unnamed-chunk-2-1.png)
+![](mushrooms.png)
 
 ``` r
         ggsave(filename = "mushrooms.png", device = "png")
