@@ -20,7 +20,7 @@ criteria:
 ``` r
 flights|>
   filter(origin == "LGA",
-         day == "16",
+         day == 16,
          distance <2000)|>
   ggplot(mapping = aes(x = distance, y = air_time)) + 
   geom_point(na.rm = TRUE) + 
