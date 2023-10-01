@@ -102,14 +102,14 @@ mushrooms |>
 ``` r
         ggsave(filename = "mushrooms.png", device = "png")
 ```
-![](mushrooms.png) 
+
 Here above, you can a small dataset I created, detailing mushroom
 species name, color, and height. There were no N/A values in this data
 so I did not have to do anything concerning them. I did however use
 janitor (clean_names) to remove any space within the column names, then
 made sure mushroom species was read as a factor because I want it to be
 interpreted as categorical.
-
+![](mushrooms.png) 
 (I also wanted to practice making plots so I did that as well.)
 
 # Tidying
