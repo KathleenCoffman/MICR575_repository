@@ -97,7 +97,7 @@ mushrooms |>
   scale_x_discrete(labels = NULL)
 ```
 
-![](HMWK_05_files/figure-commonmark/unnamed-chunk-2-1.png)
+
 
 ``` r
         ggsave(filename = "mushrooms.png", device = "png")
@@ -109,7 +109,7 @@ so I did not have to do anything concerning them. I did however use
 janitor (clean_names) to remove any space within the column names, then
 made sure mushroom species was read as a factor because I want it to be
 interpreted as categorical.
-
+![](mushrooms.png) 
 (I also wanted to practice making plots so I did that as well.)
 
 # Tidying
