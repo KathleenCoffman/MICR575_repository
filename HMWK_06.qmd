@@ -1,0 +1,23 @@
+---
+title: "HMWK_06"
+format: gfm
+editor: visual
+---
+
+# Good and Bad Plots
+
+## A bad plot
+
+\![\](Bad_plot_example.png)
+
+Data source: Telford and Cunningham (1991)
+
+-   This plot is a bad example of data visualization. The labels are way too small and very difficult ro read. Additionally, the data markers are also way too small and make it difficult to differentiate data categories from one another.
+
+## A good plot
+
+\![\](Good_plot_example_1.png)
+
+Data sources: Transparency International and UN Human Development Report
+
+-   This plot is a good example of effective data visualization and communication. It has an appropriate figure title, and axis labels. Additionally, the use of color to differentiate/categorize data is not overwhelming, and the data point labels are helpful.
