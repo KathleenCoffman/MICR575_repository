@@ -53,7 +53,7 @@ corresponds to the class I am completing this homework assignment for.*
 ------------------------------------------------------------------------
 
 ``` r
-plant_height<-c(6.0, 8.0, 10.0)  
+plant_height <- c(6.0, 8.0, 10.0)  
 ```
 
 ------------------------------------------------------------------------
@@ -63,7 +63,7 @@ plant_height<-c(6.0, 8.0, 10.0)
 ------------------------------------------------------------------------
 
 ``` r
-plant_name<-c("kale", "cilantro", "broccoli")  
+plant_name <-c ("kale", "cilantro", "broccoli")  
 ```
 
 ------------------------------------------------------------------------
@@ -73,7 +73,7 @@ plant_name<-c("kale", "cilantro", "broccoli")
 ------------------------------------------------------------------------
 
 ``` r
-plant_index<- 1:10  
+plant_index <- 1:10  
 ```
 
 ------------------------------------------------------------------------
@@ -153,7 +153,7 @@ rm(list=ls())
 ------------------------------------------------------------------------
 
 ``` r
-library("tidyverse")
+library(tidyverse)
 ```
 
 ------------------------------------------------------------------------
@@ -175,7 +175,7 @@ library(ggthemes, ggplot)
         C:\Users\owner\AppData\Local\Temp\RtmpcbKFKV\downloaded_packages
 
 ``` r
-library("palmerpenguins")  
+library(palmerpenguins)  
 ```
 
     # A tibble: 344 × 8
@@ -202,10 +202,6 @@ ggplot(data = penguins,
   geom_smooth(method = "lm") + labs(color = "bill_depth_mm")
 ```
 
-
-``` r
-  ggsave(filename = "hmk_03_plot.png", device = "png")
-```
 ------------------------------------------------------------------------
 ![](hmk_03_plot.png)
 
