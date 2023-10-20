@@ -4,7 +4,7 @@
 
 ## A bad plot
 
-\![\](Bad_plot_example.png)
+![](Bad_plot_example.png)
 
 Data source: Telford and Cunningham (1991)
 
@@ -15,7 +15,7 @@ Data source: Telford and Cunningham (1991)
 
 ## A good plot
 
-\![\](Good_plot_example_1.png)
+![](Good_plot_example_1.png)
 
 Data sources: Transparency International and UN Human Development Report
 
