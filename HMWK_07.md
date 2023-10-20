@@ -38,7 +38,7 @@ panel.grid.minor = element_line(color = "orange")) +
 ``` r
 ggsave(filename = "badplot.png", device = "png", width = 16, height = 8)
 ```
-
+![](badplot.png) 
 This plot is pretty UGLY. It;s a bad plot for several reasons. To quote
 a portion from Tufte’s writings, “context is essential for graphical
 integrity”. The shapes meant to differentiate peat depth are much too
