@@ -85,7 +85,7 @@ nutrients |>
 ``` r
 ggsave(filename = "goodplot.png", device = "png", width = 16, height = 8)
 ```
-
+![](goodplot.png) 
 In the good plot, we can see better context of the data and it’s more
 appropriately represented in a graph panel grid by warming treatment and
 by peat depth. The colors used here are also from hex codes to ensure
