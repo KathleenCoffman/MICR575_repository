@@ -68,7 +68,7 @@ plant_name <- c("kale", "cilantro", "broccoli")
 
 ------------------------------------------------------------------------
 
-3.  Use the c() function to create a vector of characters.
+3.  Use the : implicit function to create a vector of integers 1 to 10.
 
 ------------------------------------------------------------------------
 
