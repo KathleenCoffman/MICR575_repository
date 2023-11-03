@@ -1,0 +1,72 @@
+# hmk_08
+
+## JOINS
+
+Fist, I loaded the appropriate packages and create flights2 object.
+
+``` r
+library(tidyverse)
+library(nycflights13)
+
+flights2 <- flights |>
+  select(year, time_hour, origin, dest, tailnum, carrier)
+```
+
+1.  “Imagine you’ve found the top 10 most popular destinations using
+    this code:”
+
+I created my top 10 destinations object and then used view to see the
+top 10 most popular destinations:
+
+``` r
+top_dest <- flights2 |> 
+  count(dest, sort = TRUE) |> 
+  head(10)
+
+view(top_dest)
+```
+
+Now, to see all flights to those destinations, I created the all_flights
+object, then I used left_join to join top_dest with flights2, but only
+by “dest”, because that’s the only column we are concerned with in this
+situation:
+
+``` r
+all_flights <- top_dest |> 
+  left_join(flights2, by = "dest") 
+```
+
+I checked to make sure that both have 10 destinations by using “\|\>
+count (dest)” for each in the console.
+
+## FUNCTIONS
+
+2.  “Write a function to ‘rescale’ a numeric vector by subtracting the
+    mean of the vector from each element and then dividing each element
+    by the standard deviation:”
+
+The ‘funct’ vector I created below contains values 1-10. Then I used
+‘rescale’ to create a function of my x (column of data).
+
+``` r
+funct <- c(1:10)
+```
+
+This is where I created my function(x) to subtract the mean (x) from the
+original (x) value, then divded by the standard dev (sd) as instructed.
+
+``` r
+rescale <- function(x) { 
+  x - mean(x) / sd(x) 
+  } 
+```
+
+Then I used ‘funct2’ as my new object that contains the rescaled ‘funct’
+using the function of x equation I created above. This gives me the
+output of my function (x - mean(x) / sd(x)) for each of my vector
+integers. Then I used the view function to see the values in a table.
+
+``` r
+funct2 <- rescale(funct)
+view(funct2)
+```
