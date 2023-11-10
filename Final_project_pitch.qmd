@@ -1,0 +1,35 @@
+---
+title: "Final project pitch"
+format: gfm
+editor: visual
+---
+
+## Final project pitch 
+
+-   Who is in your group (or is it a solo project)?
+
+    -   My group consists of Kayla Summerlot and myself (Kathleen Coffman)
+
+-   Is your project an analysis or a tool?
+
+    -   Our project is a tool (package) that will help overall readability of this data to make it easier for people to use in the future.
+
+-   In a couple of sentences: What problem are you trying to solve, and who will it help? (No need to overthink "who will it help" - in the case of an analysis project, "It will make my dissertation better" is sufficient).
+
+    -    Our project will consist of:
+
+        -   Writing functions to read and check the data, and to plot it and export it easily. We also aim to rename columns to make data more easily interpreted. Our data is 15 csv files containing environmental sensor data from the DOE SPRUCE project. This will make future interactions with this dataset easier to deal with.
+
+        -   Our must haves:
+
+            -   sensibly renamed columns
+
+            -   function that reads data, checks data, plots data
+
+        -   Nice to haves:
+
+            -   provide sensor documentation within package for future troubleshooting
+
+        -   Stretch goals:
+
+            -   include interactive PCA analysis as well
