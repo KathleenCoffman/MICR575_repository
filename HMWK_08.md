@@ -2,7 +2,7 @@
 
 ## JOINS
 
-Fist, I loaded the appropriate packages and create flights2 object.
+First, I loaded the appropriate packages and create flights2 object.
 
 ``` r
 library(tidyverse)
