@@ -18,7 +18,6 @@
 
   - Our project will consist of:
 
-  <!-- -->
 
       -   Writing functions to read and check the data, and to plot it and export it easily. We also aim to rename columns to make data more easily interpreted. Our data is 15 csv files containing environmental sensor data from the DOE SPRUCE project. This will make future interactions with this dataset easier to deal with.
 
